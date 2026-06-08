@@ -34,8 +34,11 @@ Domain types live in `src/lib/types.ts`:
 `src/lib/mock-ai.ts` owns the current fake intelligence layer:
 
 - `analyzeBossSong`
+- `generateBossPath`
+- `getDailyChallenge`
 - `getActiveNode`
 - `calculateReadiness`
+- `calculateBossDifficulty`
 - `simulateChallengeFeedback`
 
 Future backend services should replace this module first, not the component tree.

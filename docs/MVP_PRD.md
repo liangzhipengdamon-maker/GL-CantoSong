@@ -14,15 +14,15 @@ A Cantonese song learner who has one song they strongly want to sing, but does n
 
 - Home: combined overview of Boss Song, Song DNA, active daily challenge, and path.
 - Boss: song goal and Song DNA detail.
-- Path: all knowledge nodes with clear/active/locked states.
-- Challenge: daily drill with simulated feedback.
+- Path: 14 daily knowledge nodes with clear/active/locked states.
+- Challenge: daily drill with simulated feedback, XP, and Boss difficulty reduction.
 - Final Boss: placeholder final chorus attempt.
 
 ## MVP Features
 
 - Typed Boss Song and path data.
-- Mock Song DNA analysis.
-- Mock path generation.
+- Mock Song DNA analysis with at least 18 demands for the default Boss Song.
+- Mock 14-day Boss Path generation.
 - Local interactive path progression.
 - Simulated challenge feedback.
 - Clear product language that keeps AI behind the curtain.

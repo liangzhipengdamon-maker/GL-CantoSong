@@ -330,9 +330,43 @@ h3 {
   margin-bottom: 18px;
 }
 
-.path-count {
+.path-metrics {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
   color: var(--muted);
   font-weight: 900;
+}
+
+.path-metrics span {
+  border: 1px solid var(--line);
+  background: #fffdf8;
+  padding: 7px 9px;
+}
+
+.day-progress {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(12px, 1fr));
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.day-progress span {
+  height: 10px;
+  border: 1px solid var(--line);
+  background: #fffdf8;
+}
+
+.day-progress span.cleared {
+  border-color: var(--jade);
+  background: var(--jade);
+}
+
+.day-progress span.active {
+  border-color: var(--ink);
+  background: var(--gold);
 }
 
 .dna-list {
@@ -346,6 +380,15 @@ h3 {
   border: 1px solid var(--line);
   padding: 14px;
   background: #fffdf8;
+}
+
+.dna-category {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--red);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .dna-item strong {
@@ -425,6 +468,37 @@ h3 {
   color: var(--muted);
 }
 
+.challenge-steps {
+  display: grid;
+  gap: 7px;
+  margin: 14px 0;
+  padding-left: 20px;
+}
+
+.challenge-steps li {
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.reward-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.reward-row span,
+.difficulty-chip {
+  display: inline-grid;
+  min-height: 30px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  background: var(--gold);
+  padding: 5px 8px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
 .feedback-strip {
   display: grid;
   gap: 8px;
@@ -451,13 +525,13 @@ h3 {
 
 .path-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
 }
 
 .path-node {
   position: relative;
-  min-height: 220px;
+  min-height: 286px;
   border: 2px solid var(--line);
   background: #fffdf8;
   padding: 14px;
@@ -477,14 +551,27 @@ h3 {
   background: repeating-linear-gradient(-45deg, #fffdf8, #fffdf8 10px, #f3eadc 10px, #f3eadc 20px);
 }
 
+.node-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
 .node-number {
   display: grid;
   place-items: center;
   width: 34px;
   height: 34px;
-  margin-bottom: 18px;
   border: 2px solid currentColor;
   font-weight: 900;
+}
+
+.node-status {
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .node-type {
@@ -496,7 +583,23 @@ h3 {
 }
 
 .path-node h3 {
-  min-height: 54px;
+  min-height: 50px;
+}
+
+.unlock-line {
+  display: grid;
+  gap: 4px;
+  min-height: 78px;
+  margin-top: 10px;
+}
+
+.unlock-line strong {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.difficulty-chip {
+  margin-top: 8px;
 }
 
 .node-button {

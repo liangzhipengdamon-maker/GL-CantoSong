@@ -1,12 +1,12 @@
 import { AppNav } from "@/components/AppNav";
 import { DailyChallengeCard } from "@/components/DailyChallengeCard";
-import { dailyChallenges } from "@/data/mock-paths";
 import { activeBossSong } from "@/data/songs";
-import { analyzeBossSong, getActiveNode } from "@/lib/mock-ai";
+import { analyzeBossSong, getActiveNode, getDailyChallenge } from "@/lib/mock-ai";
 
 export default function ChallengePage() {
   const analysis = analyzeBossSong(activeBossSong.id);
   const activeNode = getActiveNode(analysis.path, 1);
+  const activeChallenge = getDailyChallenge(activeBossSong.id, activeNode.day);
 
   return (
     <main className="single-page narrow">
@@ -16,7 +16,7 @@ export default function ChallengePage() {
         <p>Feedback is mocked for the MVP so the product loop can be tested before real scoring is added.</p>
       </header>
       <AppNav />
-      <DailyChallengeCard challenge={dailyChallenges[0]} node={activeNode} />
+      <DailyChallengeCard challenge={activeChallenge} node={activeNode} />
     </main>
   );
 }

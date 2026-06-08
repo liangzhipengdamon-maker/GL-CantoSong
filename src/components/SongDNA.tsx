@@ -14,6 +14,7 @@ export function SongDNA({ items }: SongDNAProps) {
       <div className="dna-list">
         {items.map((item) => (
           <div className="dna-item" key={item.id}>
+            <span className="dna-category">{item.category.replaceAll("-", " ")}</span>
             <strong>{item.name}</strong>
             <p>{item.detail}</p>
             <div className="dna-score" aria-label={`${item.name} difficulty ${item.difficulty} out of 5`}>

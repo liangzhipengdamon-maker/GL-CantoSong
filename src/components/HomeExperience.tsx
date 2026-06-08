@@ -5,14 +5,14 @@ import { DailyChallengeCard } from "@/components/DailyChallengeCard";
 import { GameLearnBadge } from "@/components/GameLearnBadge";
 import { PlayablePath } from "@/components/PlayablePath";
 import { SongDNA } from "@/components/SongDNA";
-import { dailyChallenges } from "@/data/mock-paths";
 import { activeBossSong } from "@/data/songs";
-import { analyzeBossSong, calculateReadiness, getActiveNode } from "@/lib/mock-ai";
+import { analyzeBossSong, calculateReadiness, getActiveNode, getDailyChallenge } from "@/lib/mock-ai";
 
 export function HomeExperience() {
   const analysis = analyzeBossSong(activeBossSong.id);
   const readiness = calculateReadiness(activeBossSong.readinessBase, 1);
   const activeNode = getActiveNode(analysis.path, 1);
+  const activeChallenge = getDailyChallenge(activeBossSong.id, activeNode.day);
 
   return (
     <main className="app-shell">
@@ -28,7 +28,7 @@ export function HomeExperience() {
         <BossSongCard song={activeBossSong} readiness={readiness} />
         <section className="workspace-grid">
           <SongDNA items={analysis.dna} />
-          <DailyChallengeCard challenge={dailyChallenges[0]} node={activeNode} />
+          <DailyChallengeCard challenge={activeChallenge} node={activeNode} />
         </section>
         <PlayablePath nodes={analysis.path} />
       </section>

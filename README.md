@@ -11,9 +11,9 @@ Core principle:
 ## MVP Scope
 
 - Boss Song selection and readiness view.
-- Mock Song DNA analysis.
-- Playable learning path with locked, active, and cleared nodes.
-- Daily challenge panel with lightweight simulated feedback.
+- Mock Song DNA analysis with 18 Boss Song demands for `富士山下`.
+- 14-day playable learning path with locked, active, and cleared nodes.
+- Daily challenge panel with one matching challenge per Boss Path day.
 - Creator notes that show how AI can scale content without becoming the main product.
 
 ## Tech Stack

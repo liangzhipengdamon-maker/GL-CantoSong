@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { KnowledgeNodeCard } from "@/components/KnowledgeNodeCard";
 import type { KnowledgeNode, KnowledgeNodeStatus } from "@/lib/types";
+import { calculateBossDifficulty } from "@/lib/mock-ai";
 
 interface PlayablePathProps {
   nodes: KnowledgeNode[];
@@ -11,6 +12,8 @@ interface PlayablePathProps {
 
 export function PlayablePath({ nodes, initialCleared = 1 }: PlayablePathProps) {
   const [clearedCount, setClearedCount] = useState(initialCleared);
+  const cappedCleared = Math.min(clearedCount, nodes.length);
+  const bossDifficulty = calculateBossDifficulty(cappedCleared, nodes);
 
   function getStatus(index: number): KnowledgeNodeStatus {
     if (index < clearedCount) {
@@ -25,9 +28,17 @@ export function PlayablePath({ nodes, initialCleared = 1 }: PlayablePathProps) {
       <div className="section-heading compact">
         <div>
           <p className="mode-label">Playable Path</p>
-          <h2 id="path-title">Unlock the chorus</h2>
+          <h2 id="path-title">14-day Boss Path</h2>
         </div>
-        <span className="path-count">{Math.min(clearedCount, nodes.length)} / {nodes.length} cleared</span>
+        <div className="path-metrics" aria-label={`${cappedCleared} of ${nodes.length} days cleared`}>
+          <span>{cappedCleared} / {nodes.length} days</span>
+          <span>Boss difficulty {bossDifficulty}</span>
+        </div>
+      </div>
+      <div className="day-progress" aria-hidden="true">
+        {nodes.map((node, index) => (
+          <span className={getStatus(index)} key={node.id} />
+        ))}
       </div>
       <div className="path-track" aria-live="polite">
         {nodes.map((node, index) => (
