@@ -4,8 +4,10 @@ import { BossSongCard } from "@/components/BossSongCard";
 import { CreatorPanel } from "@/components/CreatorPanel";
 import { DailyChallengeCard } from "@/components/DailyChallengeCard";
 import { GameLearnBadge } from "@/components/GameLearnBadge";
+import { MouthCoachPanel } from "@/components/MouthCoachPanel";
 import { PlayablePath } from "@/components/PlayablePath";
 import { SongDNA } from "@/components/SongDNA";
+import { mouthCoachCards } from "@/data/mouth-coach-cards";
 import { activeBossSong } from "@/data/songs";
 import { analyzeBossSong, calculateReadiness, getActiveNode, getDailyChallenge } from "@/lib/mock-ai";
 
@@ -28,6 +30,7 @@ export function HomeExperience() {
         <AppNav />
         <BossSongCard song={activeBossSong} readiness={readiness} />
         {activeBossSong.lines ? <BossSegmentMap lines={activeBossSong.lines} /> : null}
+        <MouthCoachPanel cards={mouthCoachCards} />
         <section className="workspace-grid">
           <SongDNA items={analysis.dna} />
           <DailyChallengeCard challenge={activeChallenge} node={activeNode} />

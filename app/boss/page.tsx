@@ -2,7 +2,9 @@ import { AppNav } from "@/components/AppNav";
 import { BossSegmentMap } from "@/components/BossSegmentMap";
 import { BossSongCard } from "@/components/BossSongCard";
 import { GameLearnBadge } from "@/components/GameLearnBadge";
+import { MouthCoachPanel } from "@/components/MouthCoachPanel";
 import { SongDNA } from "@/components/SongDNA";
+import { mouthCoachCards } from "@/data/mouth-coach-cards";
 import { activeBossSong } from "@/data/songs";
 import { analyzeBossSong, calculateReadiness } from "@/lib/mock-ai";
 
@@ -22,6 +24,7 @@ export default function BossPage() {
       <AppNav />
       <BossSongCard song={activeBossSong} readiness={readiness} />
       {activeBossSong.lines ? <BossSegmentMap lines={activeBossSong.lines} /> : null}
+      <MouthCoachPanel cards={mouthCoachCards} />
       <SongDNA items={analysis.dna} />
     </main>
   );

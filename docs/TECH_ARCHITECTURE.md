@@ -27,8 +27,22 @@ Domain types live in `src/lib/types.ts`:
 - `SongDNAItem`
 - `KnowledgeNode`
 - `DailyChallenge`
+- `MouthCoachCard`
+- `HumanMouthDemo`
 - `FeedbackSignal`
 - `MockAIAnalysis`
+
+## Human Mouth Demo Assets
+
+v0.5 adds a local placeholder asset system for creator-shot mouth demos:
+
+- Metadata lives in `src/data/human-mouth-demos.ts`.
+- MouthCoach cards live in `src/data/mouth-coach-cards.ts`.
+- Lookup helpers live in `src/lib/demo-assets.ts`.
+- UI slots live in `HumanMouthDemoCard`, `HumanMouthDemoPanel`, `MouthCoachCard`, and `MouthCoachPanel`.
+- Placeholder asset folders live under `public/demos/gunfire/` and `public/posters/gunfire/`.
+
+No upload backend, cloud storage, authentication, database, recording analysis, or AI scoring is included.
 
 ## Mock AI Boundary
 
@@ -52,6 +66,7 @@ Likely service boundaries:
 - Excerpt, rhythm, and pronunciation analysis.
 - Cantonese pronunciation and tone extraction.
 - Path generation.
+- Human mouth demo asset publishing.
 - Audio attempt upload.
 - Lightweight scoring and teacher review.
 

@@ -16,6 +16,10 @@ export type SkillCategory =
 
 export type KnowledgeNodeStatus = "cleared" | "active" | "locked";
 
+export type DemoCameraAngle = "front" | "side" | "three-quarter";
+export type DemoSpeed = "slow" | "normal" | "rhythm" | "boss-tempo";
+export type DemoMode = "speak" | "chant" | "rap" | "sing";
+
 export interface LyricLine {
   id: string;
   order: number;
@@ -73,6 +77,37 @@ export interface DailyChallenge {
   steps: string[];
   xpReward: number;
   difficultyReduction: number;
+}
+
+export interface MouthCoachCard {
+  id: string;
+  bossSegmentId: SongId;
+  titleZh: string;
+  targetText: string;
+  jyutping: string;
+  lyricLineIds: string[];
+  mouthCueZh: string;
+  commonMistakeZh: string;
+  correctionZh: string;
+  practiceSteps: string[];
+}
+
+export interface HumanMouthDemo {
+  id: string;
+  bossSegmentId: SongId;
+  mouthCoachCardId: string;
+  lyricLineIds: string[];
+  targetText: string;
+  jyutping: string;
+  angle: DemoCameraAngle;
+  speed: DemoSpeed;
+  mode: DemoMode;
+  titleZh: string;
+  descriptionZh: string;
+  videoSrc?: string;
+  posterSrc?: string;
+  durationSec?: number;
+  filmingStatus: "placeholder" | "planned" | "shot" | "edited" | "published";
 }
 
 export interface FeedbackSignal {
