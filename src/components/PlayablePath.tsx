@@ -27,8 +27,8 @@ export function PlayablePath({ nodes, initialCleared = 1 }: PlayablePathProps) {
     <section className="path-section" aria-labelledby="path-title">
       <div className="section-heading compact">
         <div>
-          <p className="mode-label">Playable Path</p>
-          <h2 id="path-title">14-day Boss Path</h2>
+          <p className="mode-label">逐句通关</p>
+          <h2 id="path-title">7天 Boss Segment Path</h2>
         </div>
         <div className="path-metrics" aria-label={`${cappedCleared} of ${nodes.length} days cleared`}>
           <span>{cappedCleared} / {nodes.length} days</span>

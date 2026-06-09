@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/boss", label: "Boss" },
-  { href: "/path", label: "Path" },
-  { href: "/challenge", label: "Challenge" },
-  { href: "/final-boss", label: "Final Boss" },
+  { href: "/", label: "首页" },
+  { href: "/boss", label: "Boss 段落" },
+  { href: "/path", label: "逐句通关" },
+  { href: "/challenge", label: "今日挑战" },
+  { href: "/final-boss", label: "Boss Run" },
 ];
 
 export function AppNav() {

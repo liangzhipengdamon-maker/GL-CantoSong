@@ -1,8 +1,9 @@
 # GL-CantoSong
 
-GL-CantoSong is a GameLearn sub-project for turning Cantonese song learning into a playable path.
+GL-CantoSong turns Cantonese song learning into a playable path.
 
-The MVP is intentionally not a generic AI singing app, generic Cantonese course, or simple song list. The learner chooses one Boss Song they truly want to sing, then clears the Cantonese knowledge and singing micro-skill nodes needed to conquer it.
+v0.3 pivots to a real learner request: one short Boss Segment from `枪火`.
+The goal is not catalog expansion, but proving that a short target segment can generate a focused pronunciation path.
 
 Core principle:
 
@@ -10,11 +11,12 @@ Core principle:
 
 ## MVP Scope
 
-- Boss Song selection and readiness view.
-- Mock Song DNA analysis with 18 Boss Song demands for `富士山下`.
-- 14-day playable learning path with locked, active, and cleared nodes.
-- Daily challenge panel with one matching challenge per Boss Path day.
-- Creator notes that show how AI can scale content without becoming the main product.
+- Boss Segment target: `枪火｜01:05-01:17｜6句粤语 Rap`.
+- Six provided lyric lines with timestamps, Jyutping, and focus tags.
+- Segment-specific Song DNA for pronunciation, tone, rhythm, breath, and HK bite.
+- 7-day playable path that progresses line by line into a full Boss Run.
+- One daily challenge per path day with mock feedback.
+- No extra lyrics, real AI scoring, audio recording, authentication, database, or song catalog.
 
 ## Tech Stack
 
@@ -61,6 +63,7 @@ Useful checks:
 ```bash
 npm run typecheck
 npm run build
+npm run lint
 ```
 
 ## Verification
@@ -74,7 +77,7 @@ Last checked:
 
 ## Product Guardrails
 
-- Keep the first screen focused on the learner's chosen Boss Song.
+- Keep the first screen focused on the learner's current Boss Segment.
 - Treat AI as analysis and content leverage, not the user-facing promise.
-- Every lesson should answer: "What does this unlock in the song?"
-- Prefer small clearable challenges over passive content.
+- Every lesson should answer: "这一关解锁《枪火》哪一句？"
+- Prefer short clearable segment challenges over broad song catalog features.

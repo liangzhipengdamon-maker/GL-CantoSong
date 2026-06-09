@@ -1,4 +1,5 @@
 import { AppNav } from "@/components/AppNav";
+import { BossSegmentMap } from "@/components/BossSegmentMap";
 import { BossSongCard } from "@/components/BossSongCard";
 import { CreatorPanel } from "@/components/CreatorPanel";
 import { DailyChallengeCard } from "@/components/DailyChallengeCard";
@@ -26,6 +27,7 @@ export function HomeExperience() {
         </header>
         <AppNav />
         <BossSongCard song={activeBossSong} readiness={readiness} />
+        {activeBossSong.lines ? <BossSegmentMap lines={activeBossSong.lines} /> : null}
         <section className="workspace-grid">
           <SongDNA items={analysis.dna} />
           <DailyChallengeCard challenge={activeChallenge} node={activeNode} />

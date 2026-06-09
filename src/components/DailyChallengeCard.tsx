@@ -21,8 +21,8 @@ export function DailyChallengeCard({ challenge, node }: DailyChallengeCardProps)
   return (
     <article className="daily-challenge" aria-labelledby="challenge-title">
       <div className="section-heading">
-        <p className="mode-label">Daily Challenge · Day {challenge.day}</p>
-        <h2 id="challenge-title">Clear today&apos;s Boss node</h2>
+        <p className="mode-label">今日挑战 · Day {challenge.day}</p>
+        <h2 id="challenge-title">清掉今天这一句</h2>
       </div>
       <div className="challenge-card">
         <span className="challenge-tag">{node.type.replaceAll("-", " ")}</span>
@@ -34,7 +34,11 @@ export function DailyChallengeCard({ challenge, node }: DailyChallengeCardProps)
           ))}
         </ol>
         <div className="target-line">
-          <strong>Unlock target</strong>
+          <strong>这一关解锁</strong>
+          <span>{node.unlocks}</span>
+        </div>
+        <div className="target-line">
+          <strong>练习目标</strong>
           <span>{challenge.target}</span>
         </div>
         <div className="reward-row">

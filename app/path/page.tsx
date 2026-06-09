@@ -9,8 +9,8 @@ export default function PathPage() {
   return (
     <main className="single-page">
       <header className="simple-header">
-        <p className="eyebrow">Playable Path</p>
-        <h1>Clear nodes, unlock the chorus</h1>
+        <p className="eyebrow">逐句通关</p>
+        <h1>7天清掉《枪火》6句 Rap</h1>
         <p>{analysis.summary}</p>
       </header>
       <AppNav />

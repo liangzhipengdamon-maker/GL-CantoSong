@@ -18,6 +18,14 @@ export function KnowledgeNodeCard({ node, status, onClear }: KnowledgeNodeCardPr
       <div className="node-type">Day {node.day} · {node.type.replaceAll("-", " ")}</div>
       <h3>{node.title}</h3>
       <p>{node.copy}</p>
+      {node.jyutping ? <p className="node-jyutping">{node.jyutping}</p> : null}
+      {node.focus ? (
+        <div className="focus-tags node-focus">
+          {node.focus.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+      ) : null}
       <div className="unlock-line">
         <strong>Unlocks</strong>
         <small>{node.unlocks}</small>

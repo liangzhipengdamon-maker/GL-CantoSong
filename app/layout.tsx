@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "GL-CantoSong",
-  description: "A GameLearn MVP for turning Cantonese song learning into a playable Boss Song path.",
+  description: "A GameLearn MVP for turning one Cantonese rap segment into a playable Boss Segment path.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

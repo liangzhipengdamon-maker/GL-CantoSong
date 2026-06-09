@@ -7,7 +7,7 @@ export function analyzeBossSong(songId: SongId): MockAIAnalysis {
 
   return {
     songId,
-    summary: "Mock analysis: this Boss Song is won by a 14-day path through Cantonese tone, diction, breath, lyric meaning, and restrained ballad expression.",
+    summary: "Mock analysis: this Boss Segment is won by clearing 6 Cantonese rap lines, then running the full 01:05-01:17 segment with precise finals, tones, rhythm, and HK bite.",
     dna: songDNA.filter((item) => item.songId === songId),
     path,
   };
@@ -35,7 +35,7 @@ export function calculateReadiness(base: number, clearedCount: number): number {
   return Math.min(100, base + clearedCount * 5);
 }
 
-export function calculateBossDifficulty(clearedCount: number, path: KnowledgeNode[] = generateBossPath("fuji-mountain")): number {
+export function calculateBossDifficulty(clearedCount: number, path: KnowledgeNode[] = generateBossPath("gunfire-segment")): number {
   const clearedNodes = path.slice(0, clearedCount);
   const reduction = clearedNodes.reduce((total, node) => total + node.difficultyReduction, 0);
 
@@ -45,19 +45,19 @@ export function calculateBossDifficulty(clearedCount: number, path: KnowledgeNod
 export function simulateChallengeFeedback(seed: number): FeedbackSignal[] {
   const feedbackSets: FeedbackSignal[][] = [
     [
-      { label: "Pitch anchor: stable", state: "good" },
-      { label: "Tone shape: si6 held", state: "good" },
-      { label: "Breath: early but clean", state: "good" },
+      { label: "入声收尾: clean", state: "good" },
+      { label: "节奏卡点: on pocket", state: "good" },
+      { label: "港味气场: controlled", state: "good" },
     ],
     [
-      { label: "Pitch anchor: close", state: "good" },
-      { label: "Tone shape: drifted upward", state: "needs-work" },
-      { label: "Breath: clean", state: "good" },
+      { label: "入声收尾: close", state: "good" },
+      { label: "ngo5 鼻音: dropped", state: "needs-work" },
+      { label: "节奏卡点: clean", state: "good" },
     ],
     [
-      { label: "Pitch anchor: stable", state: "good" },
-      { label: "Tone shape: clear", state: "good" },
-      { label: "Breath: ran out near line end", state: "needs-work" },
+      { label: "低声调: grounded", state: "good" },
+      { label: "gw / cyun / coeng: clear", state: "good" },
+      { label: "一句一口气: rushed", state: "needs-work" },
     ],
   ];
 
@@ -65,7 +65,7 @@ export function simulateChallengeFeedback(seed: number): FeedbackSignal[] {
 }
 
 export const waitingFeedback: FeedbackSignal[] = [
-  { label: "Pitch anchor: waiting", state: "waiting" },
-  { label: "Tone shape: waiting", state: "waiting" },
-  { label: "Breath: waiting", state: "waiting" },
+  { label: "入声收尾: waiting", state: "waiting" },
+  { label: "节奏卡点: waiting", state: "waiting" },
+  { label: "港味气场: waiting", state: "waiting" },
 ];

@@ -2,7 +2,13 @@
 
 GL-CantoSong turns Cantonese song learning into a playable path.
 
-The product is not a generic AI singing app, a generic Cantonese course, or a song list. The learner chooses one Boss Song they truly want to sing. The system reverse-engineers the knowledge and singing micro-skills needed for that song, then turns those requirements into small clearable nodes.
+The product is not a generic AI singing app, a generic Cantonese course, or a song list. The learner chooses one meaningful target and clears the knowledge, pronunciation, rhythm, and performance micro-skills needed to conquer it.
+
+For the current MVP, that target is deliberately small:
+
+```text
+枪火｜01:05-01:17｜6句粤语 Rap
+```
 
 ## Core Belief
 
@@ -12,7 +18,9 @@ GameLearn's method is:
 
 > Turn a meaningful learning goal into a playable path.
 
-For GL-CantoSong, the meaningful goal is not "learn Cantonese" in the abstract. It is "I want to sing this song."
+For GL-CantoSong v0.3, the meaningful goal is not "learn Cantonese" or "learn a full song." It is:
+
+> I want to say/sing this 12-second Cantonese rap segment accurately, smoothly, and with HK bite.
 
 ## Product Sentence
 
@@ -24,10 +32,10 @@ AI should support analysis, path generation, feedback, and creator scale. It sho
 
 A learner can:
 
-1. Pick one Boss Song.
-2. See the Song DNA behind that song.
-3. Clear small learning nodes.
-4. Take a daily challenge.
-5. Reach a final chorus attempt.
+1. See the Boss Segment.
+2. Read the six lines with timestamps, Jyutping, and focus tags.
+3. Clear one daily line challenge.
+4. Build toward a 7-day full segment run.
+5. Reach a final Boss Run for the exact provided excerpt.
 
-The MVP should prove whether this path feels motivating before the team invests in deeper scoring or content automation.
+The MVP should prove whether a short real target segment feels motivating before the team invests in scoring, audio, backend, or content automation.

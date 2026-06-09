@@ -16,14 +16,26 @@ export type SkillCategory =
 
 export type KnowledgeNodeStatus = "cleared" | "active" | "locked";
 
+export interface LyricLine {
+  id: string;
+  order: number;
+  timestamp: string;
+  text: string;
+  jyutping: string;
+  focus: string[];
+}
+
 export interface BossSong {
   id: SongId;
   title: string;
-  artist: string;
+  sourceTitle?: string;
+  artist?: string;
   language: "Cantonese";
+  timeRange?: string;
   goal: string;
-  chorusLine: string;
   readinessBase: number;
+  lines?: LyricLine[];
+  statusLabel?: string;
 }
 
 export interface SongDNAItem {
@@ -43,6 +55,9 @@ export interface KnowledgeNode {
   day: number;
   type: SkillCategory;
   title: string;
+  targetLines?: string[];
+  jyutping?: string;
+  focus?: string[];
   copy: string;
   unlocks: string;
   difficultyReduction: number;

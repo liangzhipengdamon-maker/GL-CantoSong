@@ -1,4 +1,5 @@
 import { AppNav } from "@/components/AppNav";
+import { BossSegmentMap } from "@/components/BossSegmentMap";
 import { BossSongCard } from "@/components/BossSongCard";
 import { GameLearnBadge } from "@/components/GameLearnBadge";
 import { SongDNA } from "@/components/SongDNA";
@@ -13,13 +14,14 @@ export default function BossPage() {
     <main className="single-page">
       <header className="topbar">
         <div>
-          <p className="eyebrow">Boss Song</p>
-          <h1>Target the song</h1>
+          <p className="eyebrow">Boss 段落</p>
+          <h1>当前真实学员任务</h1>
         </div>
         <GameLearnBadge />
       </header>
       <AppNav />
       <BossSongCard song={activeBossSong} readiness={readiness} />
+      {activeBossSong.lines ? <BossSegmentMap lines={activeBossSong.lines} /> : null}
       <SongDNA items={analysis.dna} />
     </main>
   );

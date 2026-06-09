@@ -12,10 +12,10 @@
 
 ```text
 /             MVP overview
-/boss         Boss Song and Song DNA
-/path         Playable node path
+/boss         Boss Segment and Segment DNA
+/path         7-day playable line path
 /challenge    Daily challenge and simulated feedback
-/final-boss   Final chorus attempt placeholder
+/final-boss   Full 6-line Boss Run placeholder
 ```
 
 ## Data Model
@@ -23,6 +23,7 @@
 Domain types live in `src/lib/types.ts`:
 
 - `BossSong`
+- `LyricLine`
 - `SongDNAItem`
 - `KnowledgeNode`
 - `DailyChallenge`
@@ -47,8 +48,8 @@ Future backend services should replace this module first, not the component tree
 
 Likely service boundaries:
 
-- Song ingestion and rights-safe metadata.
-- Lyrics and melody analysis.
+- Segment ingestion and rights-safe metadata.
+- Excerpt, rhythm, and pronunciation analysis.
 - Cantonese pronunciation and tone extraction.
 - Path generation.
 - Audio attempt upload.

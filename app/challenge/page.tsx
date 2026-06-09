@@ -11,9 +11,9 @@ export default function ChallengePage() {
   return (
     <main className="single-page narrow">
       <header className="simple-header">
-        <p className="eyebrow">Daily Challenge</p>
-        <h1>One small clear today</h1>
-        <p>Feedback is mocked for the MVP so the product loop can be tested before real scoring is added.</p>
+        <p className="eyebrow">今日挑战</p>
+        <h1>每天通关一句</h1>
+        <p>先用 mock feedback 验证逐句练习闭环，不加入真实 AI 评分或录音。</p>
       </header>
       <AppNav />
       <DailyChallengeCard challenge={activeChallenge} node={activeNode} />
