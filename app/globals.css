@@ -454,9 +454,26 @@ h3 {
   margin: 12px 0;
 }
 
+.coach-grid.is-two,
+.contrast-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .coach-grid div {
   border: 1px solid var(--line);
   background: #f7efe1;
+  padding: 9px;
+}
+
+.contrast-grid {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.contrast-grid div {
+  border: 1px solid var(--line);
+  background: #fffaf1;
   padding: 9px;
 }
 
@@ -466,9 +483,64 @@ h3 {
   font-size: 0.76rem;
 }
 
+.coach-contrast,
+.english-approx {
+  margin-top: 12px;
+  border: 1px solid var(--ink);
+  background: #fffaf1;
+  padding: 11px;
+}
+
+.coach-contrast h4,
+.english-approx h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.contrast-note,
+.approx-warning {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.approx-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.approx-heading span {
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 3px 6px;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.approx-example {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  border-left: 5px solid var(--gold);
+  background: #f7efe1;
+  padding: 8px 10px;
+}
+
+.approx-example span {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  color: var(--ink);
+}
+
 .coach-grid p,
 .human-demo-card p,
-.mouth-coach-card li {
+.mouth-coach-card li,
+.contrast-grid p,
+.english-approx p {
   color: var(--muted);
   line-height: 1.45;
 }

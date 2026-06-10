@@ -12,6 +12,17 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "把 ngo5 读成 wo5，鼻音完全消失。",
     correctionZh: "先轻哼 ng，再接 o，保持低调重量。",
     practiceSteps: ["闭口找到鼻音", "ng-o 分开读", "连成 ngo5", "放回第 1 / 第 3 句"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：wo / 我",
+      cantoneseTargetZh: "粤语目标：ngo5 / 我",
+      keyDifferenceZh: "普通话常从 w/o 起音；粤语要先有 ng 鼻音，再打开到 o。",
+    },
+    englishApprox: {
+      example: "sing 的结尾 ng",
+      ipa: "/ŋ/",
+      whyItHelpsZh: "可以借英文 sing 结尾的 ng 找到鼻腔起音位置。",
+      differenceZh: "英文 sing 的 ng 在结尾；粤语 ngo5 要把这个 ng 放到开头，再接 o。",
+    },
   },
   {
     id: "mc-gwong-gwo",
@@ -24,6 +35,17 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "直接读成 guang / guo 的普通话口型。",
     correctionZh: "把 gw 当前置小动作，不要把圆唇丢到后面。",
     practiceSteps: ["看圆唇起点", "慢读 gwong1", "慢读 gwo3", "放回第 2 / 第 4 句"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：guang / guo",
+      cantoneseTargetZh: "粤语目标：gwong1 / gwo3",
+      keyDifferenceZh: "普通话容易先发 g 再带 u；粤语要先圆唇形成 gw 起点。",
+    },
+    englishApprox: {
+      example: "go / quote 的圆唇起点",
+      ipa: "/g/ + rounded /w/",
+      whyItHelpsZh: "可以借英文 go 或 quote 里圆唇滑音的感觉找到 gw 起点。",
+      differenceZh: "粤语 gw 更短、更集中，不能拖成英文式很长的 w。",
+    },
   },
   {
     id: "mc-final-k",
@@ -36,6 +58,17 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "收尾拖长，或者多加一个普通话式尾音。",
     correctionZh: "像把音切断，短、干净、有节奏。",
     practiceSteps: ["单练 -k 关闭", "dak1 三连", "gik1 三连", "放回第 1 / 第 3 / 第 4 句"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：da-ke / ji-ke",
+      cantoneseTargetZh: "粤语目标：dak1 / gik1",
+      keyDifferenceZh: "普通话容易加尾音；粤语 -k 是后舌根收住，短促停掉。",
+    },
+    englishApprox: {
+      example: "duck",
+      ipa: "/dʌk/",
+      whyItHelpsZh: "可以借 duck 找到 d + 短元音 + k 收尾的感觉。",
+      differenceZh: "粤语 dak1 的元音更短，嘴巴张开少一点；最后 k 是入声收住，不像英语那样明显释放。",
+    },
   },
   {
     id: "mc-final-t",
@@ -48,6 +81,17 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "把 -t 读成普通话 de/te，节奏变松。",
     correctionZh: "短停即走，让入声帮你卡点。",
     practiceSteps: ["舌尖定位", "jat1 / bat1 慢读", "faat3 带爆发", "放回第 1-6 句"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：yi / bu / fa-te",
+      cantoneseTargetZh: "粤语目标：jat1 / bat1 / faat3",
+      keyDifferenceZh: "普通话容易拖开或弹出 te；粤语 -t 是舌尖收住，不加尾音。",
+    },
+    englishApprox: {
+      example: "cat / bat",
+      ipa: "/kæt/ /bæt/",
+      whyItHelpsZh: "可以借英文 cat、bat 找到 t 在词尾收住的感觉。",
+      differenceZh: "粤语 jat1 / bat1 的 -t 更短、更内收；不要像英语那样释放得太明显。",
+    },
   },
   {
     id: "mc-cyun",
@@ -60,6 +104,17 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "读成普通话 chuan，舌位和口型都跑掉。",
     correctionZh: "先读 cyu，再接 n，保持短句速度。",
     practiceSteps: ["单练 c 起音", "cyu-n 分开", "cyun1 连读", "放回第 2 句"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：chuan",
+      cantoneseTargetZh: "粤语目标：cyun1",
+      keyDifferenceZh: "普通话 chuan 舌位更卷、更后；粤语 c 更前、更轻，后面接 rounded yun。",
+    },
+    englishApprox: {
+      example: "ts + you 的近似入口",
+      ipa: "/ts/ + /juː/",
+      whyItHelpsZh: "可以借 ts 的前位摩擦感，再接一个短的 rounded yu。",
+      differenceZh: "这只是入口；粤语 cyun1 要更短、更集中，不能读成完整英文 you。",
+    },
   },
   {
     id: "mc-coeng",
@@ -72,6 +127,17 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "为了气势喊成 qiang，粤语口型消失。",
     correctionZh: "先小声精准，再加 rap 气势。",
     practiceSteps: ["单练 c 起音", "固定 oe 口型", "coeng1 三连", "放回第 3 / 第 6 句"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：qiang / chang",
+      cantoneseTargetZh: "粤语目标：coeng1",
+      keyDifferenceZh: "普通话 qiang/chang 会把口型带跑；粤语 c 起音更前，oe 元音要保留。",
+    },
+    englishApprox: {
+      example: "church 的 ch 起点，但更短更轻",
+      ipa: "/tʃ/ as rough entry",
+      whyItHelpsZh: "可以借英文 church 的开头理解前部擦音/塞擦音入口。",
+      differenceZh: "粤语 c 不是完整英文 ch，也不要卷舌；重点是前、短、轻，再接 oe。",
+    },
   },
   {
     id: "mc-ceoi-caan",
@@ -84,6 +150,17 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "两个音黏在一起，听不出口型变化。",
     correctionZh: "先慢速夸清楚，再回到节奏。",
     practiceSteps: ["ceoi1 定口型", "caan3 打开", "中间停顿", "连成节奏"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：cui can",
+      cantoneseTargetZh: "粤语目标：ceoi1 caan3",
+      keyDifferenceZh: "普通话容易把两个音糊成普通话韵母；粤语要先圆后开，口型切换清楚。",
+    },
+    englishApprox: {
+      example: "say + can 的节奏入口",
+      ipa: "/seɪ/ + /kæn/ rough rhythm",
+      whyItHelpsZh: "可以借英文两个短词的切换感理解 ceoi1 到 caan3 的分段。",
+      differenceZh: "英文只是节奏入口；ceoi1 的圆唇和粤语 c 起音不能丢。",
+    },
   },
   {
     id: "mc-low-tones",
@@ -96,5 +173,15 @@ export const mouthCoachCards: MouthCoachCard[] = [
     commonMistakeZh: "一进 rap 节奏就把低调抬高。",
     correctionZh: "先用说话低位读，再放进节奏。",
     practiceSteps: ["四个低调慢读", "保持同一低位", "加节拍读", "放回第 1 / 3 / 4 / 6 句"],
+    contrast: {
+      mandarinHabitZh: "普通话习惯：为了 rap 把音调抬高",
+      cantoneseTargetZh: "粤语目标：zoi6 / jam6 / zau6 / jung6 低调稳定",
+      keyDifferenceZh: "粤语低调要稳，不是压喉，也不是上飘。",
+    },
+    englishApprox: {
+      example: "low spoken voice",
+      whyItHelpsZh: "可以借英文低声说话的稳定感，不要唱高也不要压喉。",
+      differenceZh: "英文没有粤语声调系统；这里只借低位稳定的身体感觉。",
+    },
   },
 ];

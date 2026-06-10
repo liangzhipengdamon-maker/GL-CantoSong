@@ -79,6 +79,19 @@ export interface DailyChallenge {
   difficultyReduction: number;
 }
 
+export interface EnglishApproximation {
+  example: string;
+  ipa?: string;
+  whyItHelpsZh: string;
+  differenceZh: string;
+}
+
+export interface PronunciationContrast {
+  mandarinHabitZh: string;
+  cantoneseTargetZh: string;
+  keyDifferenceZh: string;
+}
+
 export interface MouthCoachCard {
   id: string;
   bossSegmentId: SongId;
@@ -90,6 +103,8 @@ export interface MouthCoachCard {
   commonMistakeZh: string;
   correctionZh: string;
   practiceSteps: string[];
+  contrast?: PronunciationContrast;
+  englishApprox?: EnglishApproximation;
 }
 
 export interface HumanMouthDemo {
