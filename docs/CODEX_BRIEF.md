@@ -33,7 +33,7 @@ Only use the provided excerpt. Do not fetch, copy, or add more lyrics.
 
 ## Suggested Next Tasks
 
-1. Shoot P0 mouth demos from `docs/FILMING_GUIDE_MOUTH_DEMOS.md`.
+1. Shoot P0 mouth demos from `docs/P0_MOUTH_DEMO_SHOT_LIST.md`.
 2. Wire published demo file paths into `human-mouth-demos.ts`.
 3. Persist path progress locally.
 4. Add a retry flow for the weakest line after Day 7.
