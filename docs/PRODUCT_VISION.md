@@ -34,6 +34,18 @@ The intake is intentionally a mock boundary. It detects common source platforms,
 
 v0.7 does not scrape websites, download songs, fetch copyrighted lyrics, embed players, record audio, connect AI scoring, add a backend, or add accounts.
 
+## Page Roles
+
+Each page should answer one learner question:
+
+- Home: 我从哪里开始？ Entry and continue-learning dashboard.
+- Boss Segment: 我要学的这一段是什么？ Overview of the target segment.
+- Path: 我怎样一步步通关？ 7-day progression map.
+- Challenge: 今天具体练什么？ Focused daily drill.
+- Final Boss: 我能不能整段过关？ Full segment run.
+
+Pages should not all expand the same training content. Heavy tools belong behind progressive disclosure or on the page where they directly support the learner's next action.
+
 ## Product Sentence
 
 > AI is not the product. The path is the product.
