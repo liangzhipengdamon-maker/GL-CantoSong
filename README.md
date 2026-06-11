@@ -8,6 +8,10 @@ The goal is not catalog expansion, but proving that a short target segment can g
 v0.5 prepares a human mouth demo asset pipeline.
 The first demos are placeholders until creator-shot videos are added.
 
+v0.7 introduces a product-flow homepage:
+Song URL intake -> Demo analysis fallback -> Boss Segment -> Practice tools.
+No real song scraping, downloading, copyrighted lyric extraction, audio playback, backend, auth, or database is included.
+
 Core principle:
 
 > AI is not the product. The path is the product.
@@ -20,6 +24,7 @@ Core principle:
 - MouthCoach cards linked to planned real human mouth demo clips.
 - 7-day playable path that progresses line by line into a full Boss Run.
 - One daily challenge per path day with mock feedback.
+- URL intake mock that detects common music/video platforms and falls back to the `枪火` Demo.
 - No extra lyrics, real AI scoring, audio recording, authentication, database, or song catalog.
 
 ## Tech Stack
@@ -28,6 +33,7 @@ Core principle:
 - TypeScript
 - React components
 - Mock data and mock AI boundary
+- Mock song URL intake boundary
 - CSS in `app/globals.css`
 
 ## Structure
@@ -84,7 +90,9 @@ Last checked: 2026-06-11
 ## Product Guardrails
 
 - Keep the first screen focused on the learner's current Boss Segment.
+- Start the flow with song selection or Demo choice before showing heavy practice material.
 - Treat AI as analysis and content leverage, not the user-facing promise.
+- Do not scrape, download, save, or play source songs in the MVP.
 - Every lesson should answer: "这一关解锁《枪火》哪一句？"
 - Every mouth demo should answer: "这个示范帮助唱准哪一句、哪个音？"
 - Prefer short clearable segment challenges over broad song catalog features.

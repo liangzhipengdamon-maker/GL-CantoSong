@@ -46,6 +46,12 @@ a {
   margin: 16px auto;
 }
 
+.learner-home {
+  width: min(1120px, calc(100vw - 32px));
+  min-height: calc(100vh - 32px);
+  margin: 16px auto;
+}
+
 .single-page {
   width: min(1120px, calc(100vw - 32px));
   min-height: calc(100vh - 32px);
@@ -72,9 +78,12 @@ a {
 }
 
 .topbar,
+.song-intake,
 .boss-panel,
 .segment-map,
 .mouth-coach-panel,
+.practice-tabs,
+.technical-details,
 .workspace-grid,
 .path-section,
 .app-nav {
@@ -320,6 +329,8 @@ h3 {
 .creator-panel,
 .segment-map,
 .mouth-coach-panel,
+.song-intake,
+.practice-tabs,
 .final-boss-card {
   padding: 20px;
 }
@@ -329,9 +340,86 @@ h3 {
 .path-section,
 .segment-map,
 .mouth-coach-panel,
+.song-intake,
+.practice-tabs,
 .final-boss-card {
   border: 1px solid var(--line);
   background: var(--panel);
+}
+
+.intake-badge {
+  border: 1px solid var(--ink);
+  background: var(--gold);
+  padding: 7px 9px;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.intake-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.intake-field {
+  display: grid;
+  gap: 8px;
+  font-weight: 900;
+}
+
+.intake-field input {
+  min-height: 48px;
+  width: 100%;
+  border: 2px solid var(--ink);
+  background: #fffdf8;
+  color: var(--ink);
+  padding: 0 12px;
+  font: inherit;
+}
+
+.intake-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.intake-disclaimer {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.intake-result {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  border: 2px solid var(--ink);
+  background: #fffdf8;
+  padding: 14px;
+}
+
+.intake-result div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.intake-result span {
+  color: var(--jade);
+  font-weight: 900;
+}
+
+.intake-result p,
+.intake-result li {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.intake-result ul {
+  margin: 0;
+  padding-left: 18px;
 }
 
 .section-heading {
@@ -669,6 +757,56 @@ h3 {
   background: var(--gold);
 }
 
+.practice-tabs {
+  border: 2px solid var(--ink);
+}
+
+.tab-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tab-list button {
+  display: grid;
+  min-height: 76px;
+  gap: 5px;
+  border: 1px solid var(--line);
+  background: #fffdf8;
+  color: var(--ink);
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tab-list button.is-active,
+.tab-list button:hover {
+  border-color: var(--ink);
+  background: var(--gold);
+}
+
+.tab-list span {
+  font-weight: 900;
+}
+
+.tab-list small {
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.tab-panel > .segment-map,
+.tab-panel > .mouth-coach-panel,
+.tab-panel > .path-section {
+  margin-bottom: 0;
+}
+
+.tab-panel .human-demo-panel {
+  margin-top: 0;
+  border-top: 0;
+  padding-top: 0;
+}
+
 .dna-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -931,6 +1069,33 @@ h3 {
   align-self: start;
 }
 
+.technical-details {
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 241, 0.72);
+}
+
+.technical-details summary {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-weight: 900;
+}
+
+.technical-details[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.technical-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 18px;
+  padding: 20px;
+}
+
+.technical-grid .creator-panel {
+  position: static;
+  box-shadow: none;
+}
+
 .creator-panel p,
 .creator-panel li {
   color: var(--muted);
@@ -983,7 +1148,8 @@ h3 {
 }
 
 @media (max-width: 1040px) {
-  .app-shell {
+  .app-shell,
+  .technical-grid {
     grid-template-columns: 1fr;
   }
 
@@ -998,6 +1164,7 @@ h3 {
 
 @media (max-width: 720px) {
   .app-shell,
+  .learner-home,
   .single-page {
     width: min(100vw - 20px, 680px);
     margin: 10px auto;
@@ -1011,11 +1178,13 @@ h3 {
 
   .topbar,
   .boss-panel,
+  .intake-grid,
   .workspace-grid,
   .segment-lines,
   .mouth-coach-list,
   .coach-grid,
-  .human-demo-list {
+  .human-demo-list,
+  .tab-list {
     grid-template-columns: 1fr;
   }
 

@@ -1,12 +1,12 @@
 import { AppNav } from "@/components/AppNav";
-import { BossSegmentMap } from "@/components/BossSegmentMap";
 import { BossSongCard } from "@/components/BossSongCard";
 import { CreatorPanel } from "@/components/CreatorPanel";
 import { DailyChallengeCard } from "@/components/DailyChallengeCard";
 import { GameLearnBadge } from "@/components/GameLearnBadge";
-import { MouthCoachPanel } from "@/components/MouthCoachPanel";
-import { PlayablePath } from "@/components/PlayablePath";
+import { PracticeTabs } from "@/components/PracticeTabs";
 import { SongDNA } from "@/components/SongDNA";
+import { SongIntakeForm } from "@/components/SongIntakeForm";
+import { humanMouthDemos } from "@/data/human-mouth-demos";
 import { mouthCoachCards } from "@/data/mouth-coach-cards";
 import { activeBossSong } from "@/data/songs";
 import { analyzeBossSong, calculateReadiness, getActiveNode, getDailyChallenge } from "@/lib/mock-ai";
@@ -18,7 +18,7 @@ export function HomeExperience() {
   const activeChallenge = getDailyChallenge(activeBossSong.id, activeNode.day);
 
   return (
-    <main className="app-shell">
+    <main className="learner-home">
       <section className="stage" aria-labelledby="app-title">
         <header className="topbar">
           <div>
@@ -28,16 +28,23 @@ export function HomeExperience() {
           <GameLearnBadge />
         </header>
         <AppNav />
+        <SongIntakeForm />
         <BossSongCard song={activeBossSong} readiness={readiness} />
-        {activeBossSong.lines ? <BossSegmentMap lines={activeBossSong.lines} /> : null}
-        <MouthCoachPanel cards={mouthCoachCards} />
-        <section className="workspace-grid">
-          <SongDNA items={analysis.dna} />
-          <DailyChallengeCard challenge={activeChallenge} node={activeNode} />
-        </section>
-        <PlayablePath nodes={analysis.path} />
+        <DailyChallengeCard challenge={activeChallenge} node={activeNode} />
+        <PracticeTabs
+          humanDemos={humanMouthDemos}
+          lines={activeBossSong.lines ?? []}
+          mouthCoachCards={mouthCoachCards}
+          nodes={analysis.path}
+        />
+        <details className="technical-details">
+          <summary>开发者说明 / Creator Console</summary>
+          <div className="technical-grid">
+            <SongDNA items={analysis.dna} />
+            <CreatorPanel />
+          </div>
+        </details>
       </section>
-      <CreatorPanel />
     </main>
   );
 }

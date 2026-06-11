@@ -1,5 +1,17 @@
 export type SongId = string;
 
+export type SongSourcePlatform =
+  | "youtube"
+  | "bilibili"
+  | "netease"
+  | "qqmusic"
+  | "spotify"
+  | "apple-music"
+  | "generic-url"
+  | "manual-demo";
+
+export type AnalyzeJobStatus = "idle" | "received" | "mock-analyzing" | "ready" | "unsupported";
+
 export type SkillCategory =
   | "listen"
   | "pronunciation"
@@ -27,6 +39,22 @@ export interface LyricLine {
   text: string;
   jyutping: string;
   focus: string[];
+}
+
+export interface SongSourceInput {
+  id: string;
+  url: string;
+  platform: SongSourcePlatform;
+  titleHint?: string;
+  status: AnalyzeJobStatus;
+  createdAt: string;
+}
+
+export interface MockSongAnalyzeResult {
+  source: SongSourceInput;
+  bossSegmentId: SongId;
+  messageZh: string;
+  limitationsZh: string[];
 }
 
 export interface BossSong {
