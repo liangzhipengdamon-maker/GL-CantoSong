@@ -79,6 +79,7 @@ a {
 
 .topbar,
 .song-intake,
+.today-flow,
 .boss-panel,
 .segment-map,
 .mouth-coach-panel,
@@ -203,6 +204,35 @@ h3 {
 
 .boss-panel.is-compact {
   min-height: 190px;
+}
+
+.today-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.today-flow .boss-panel,
+.today-flow .daily-challenge {
+  margin-bottom: 0;
+}
+
+.today-flow .boss-panel {
+  min-height: 100%;
+}
+
+.today-flow .boss-copy h2 {
+  font-size: clamp(2.1rem, 5vw, 4.6rem);
+}
+
+.today-flow .boss-actions {
+  margin-top: 16px;
+}
+
+.today-flow .readiness-meter {
+  width: 142px;
+  height: 142px;
 }
 
 .boss-copy {
@@ -1179,6 +1209,7 @@ h3 {
   .topbar,
   .boss-panel,
   .intake-grid,
+  .today-flow,
   .workspace-grid,
   .segment-lines,
   .mouth-coach-list,

@@ -29,8 +29,10 @@ export function HomeExperience() {
         </header>
         <AppNav />
         <SongIntakeForm />
-        <BossSongCard song={activeBossSong} readiness={readiness} />
-        <DailyChallengeCard challenge={activeChallenge} node={activeNode} />
+        <section className="today-flow" aria-label="当前学习任务">
+          <BossSongCard song={activeBossSong} readiness={readiness} compact />
+          <DailyChallengeCard challenge={activeChallenge} node={activeNode} />
+        </section>
         <PracticeTabs
           humanDemos={humanMouthDemos}
           lines={activeBossSong.lines ?? []}
